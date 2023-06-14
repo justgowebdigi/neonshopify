@@ -1,0 +1,186 @@
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
+      <div class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}   style= "background-color: {{ block.settings.bgcolor }};">
+        {%- if block.settings.text != blank -%}
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+          {%- endif -%}
+              <div class="page-width">
+                <p class="announcement-bar__message  {{ block.settings.text_alignment }} h5">
+                 {% if block.settings.text != blank %} <span class = "message">{{ block.settings.text | escape }}</span><span>|</span>{% endif %}
+                 {% if block.settings.text1 != blank %} <span class = "message">{{ block.settings.text1 | escape }}</span><span>|</span>{% endif %}
+                 
+          {% if block.settings.text2 != blank %} <span class = "message"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  fill = "#ffc506" x="0px" y="0px" width="17px" height="16px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="110" height="30" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill = "#ffc506" x="0px" y="0px" width="17px" height="16px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="110" height="30" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill = "#ffc506" x="0px" y="0px" width="17px" height="16px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="110" height="30" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill = "#ffc506" x="0px" y="0px" width="17px" height="16px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="110" height="30" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill = "#ffc506" x="0px" y="0px" width="17px" height="16px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="110" height="30" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+          <span class = "custom-rating-text">{{ block.settings.text2 | escape }}</span></span><span>|</span>{% endif %}
+                  {% if block.settings.text3 != blank %}<span class = "message">{{ block.settings.text3 | escape }}</span>{% endif %}
+                  {%- if block.settings.link != blank -%}
+                    {% render 'icon-arrow' %}
+                  {%- endif -%}
+                </p>
+              </div>
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
+<div class = "sale-container" style= "background-color: {{ section.settings.color }};">
+<span class = "message medium">{{ section.settings.sale }}</span>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "color",
+          "id": "bgcolor",
+          "label": "Select Background Color"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "html",
+          "id": "text2",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.label"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "t:sections.all.colors.accent_1.label"
+            },
+            {
+              "value": "accent-2",
+              "label": "t:sections.all.colors.accent_2.label"
+            },
+            {
+              "value": "background-1",
+              "label": "t:sections.all.colors.background_1.label"
+            },
+            {
+              "value": "background-2",
+              "label": "t:sections.all.colors.background_2.label"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "default": "accent-1",
+          "label": "t:sections.all.colors.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        }
+      ]
+    }
+  ],
+  "settings":[
+    {
+      "id": "color",
+      "type": "color",
+      "label": "Select Background Color"
+    },
+    {
+      "id": "sale",
+      "type": "html",
+      "label": "Enter Second Line Of Announcement Bar"
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "announcement"
+      }
+    ]
+  }
+}
+{% endschema %}

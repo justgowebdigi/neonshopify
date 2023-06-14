@@ -1,0 +1,28 @@
+<div class = "text-section">
+  <h1>{{ section.settings.heading }}</h1>
+{{ section.settings.text }}
+</div>
+
+{% schema %}
+{
+  "name": "text-section",
+  "settings": [
+    {
+      "id": "heading",
+      "label": "Enter Heading",
+      "type": "text"
+    },
+{
+  "id": "text",
+  "type": "richtext",
+  "label": "Enter Text"
+}
+  ], 
+
+"presets":[
+{"name":"text-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

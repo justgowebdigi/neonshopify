@@ -1,0 +1,775 @@
+<style>
+
+  .product_desc_text{
+    color:white;
+  }
+.products_wrapper4 .products_detail,.products_wrapper3 .products_detail,.products_wrapper3 .pro,.products_wrapper2 .products_detail{
+padding:35px 35px ;
+}
+.products_wrapper4 .products_detail h2{
+color:white;
+font-weight:600px;
+}
+.pro h2,.products_wrapper3 .products_detail h2{
+color:white;
+font-weight:600px;
+margin-bottom:15px;
+}
+.pro > p,.products_wrapper3 .products_detail>p{
+margin-bottom:15px;
+}
+.products_wrapper3 .about_box{
+display:flex;
+}
+.products_wrapper3 .new-box{
+display: flex;
+    align-items: center;
+}
+.products_wrapper3 .new-box .box_text{
+padding-right: 30px;
+border-right: 2px solid #888A92;
+}
+.products_wrapper4 .products_detail .guide{
+margin-top:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-column-gap:40px;
+}
+ .products_wrapper4 .box_img{
+   width:20%;
+   display:flex;
+   
+ }
+   .products_wrapper4 .box_text{
+     width:80%;
+ }
+  
+.products_wrapper4 .products_detail .guide .new-box{
+display:flex;
+align-items: center;
+}
+.product-tabber .product_img_text{
+display:flex;
+margin-bottom:30px;
+}
+.product-tabber .product_img{
+position:relative;
+width:34%;
+}
+.why_bg{
+position: absolute;
+top: -10px;
+opacity: 50%;
+left: 10px;
+} 
+.gif{
+width: 50%;
+margin: 0 auto;
+  height:70px;
+}
+.product-tabber .product_text{
+width:66%;
+padding:0px 10px;
+}
+.product-tabber .product_text p{
+color: #17dd7e !important;
+font-size: 18px !important;
+line-height: 24px !important;
+font-weight:600;
+}
+.product-tabber{
+padding-top:70px;
+}
+
+.product-tabber ul{
+justify-content:space-between;
+}
+.product-tabber ul.tabs{
+margin: 0px;
+padding: 0px;
+list-style: none;
+}
+.product-tabber ul.tabs li{
+font-size:20px;
+color: #222;
+display: inline-block;
+padding: 10px 15px;
+cursor: pointer;
+}
+
+.product-tabber ul.tabs li.current{
+border-bottom:2px solid white;
+color: #222;
+font-weight:600;
+}
+
+.product-tabber .tab-content{
+margin-top:10px;
+display: none;
+background: #ededed;
+padding: 15px;
+}
+
+.product-tabber .tab-content.current{
+display: inherit;
+background-color:rgba(30, 30, 32, 0.92);
+border-radius:20px;
+}
+.product-tabber .products_wrapper{
+padding:50px 20px;
+display: grid;
+grid-template-columns:repeat(4,1fr);
+grid-column-gap:35px;
+grid-row-gap: 55px;
+
+}
+         
+</style>
+<style>
+.faqs .accordion {
+    border-bottom: 1px solid #fff;
+}
+  .item accordion{
+    transition:all 1s ease;
+  }
+  	.sv-slider-item img {
+  width: 100%;
+  height: 200px;
+}
+
+.sv-slider .owl-thumbs {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.owl-thumbs button>img {
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+}
+button.owl-thumb-item.active {
+    border: solid 1px #ff457c;
+}
+  button.owl-thumb-item.active img {
+    opacity: 1 !important;
+}
+  
+.contents {
+	display: none;
+	padding: 15px;
+    color: #fff;
+}
+
+</style>
+ <div class="wrap">  
+   <div class="product-tabber Desk page-width">
+    <div class="ul-cover">
+	<ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1">Why Us</li>
+		<li class="tab-link" data-tab="tab-2">Product Description</li>
+		<li class="tab-link" data-tab="tab-3">What does the kit contain?</li>
+		<li class="tab-link" data-tab="tab-4">Product Installation Guide</li>
+	</ul>
+    </div>
+
+	<div id="tab-1" class="tab-content current">
+      
+	<div class="products_wrapper">
+            <div class="product_box">
+              <div class="product_img_text">
+                <div class="product_img">
+                
+                  <div class="img-responsive gif ls-is-cached lazyloaded">
+                    {% render 'sv1' %}
+                  </div>
+                  <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_two.png" alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_two.png">
+                </div>
+                <div class="product_text">
+                  <p class="text_md">Premium
+                    quality</p>
+                </div>
+              </div>
+              <p class="text_reg">The best quality materials used to create the perfect sign for you. </p>
+            </div>
+            <div class="product_box">
+              <div class="product_img_text">
+                <div class="product_img">
+                  <div class="img-responsive gif ls-is-cached lazyloaded">
+                    {% render 'sv2' %}
+                  </div>
+                  <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_one.png" alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_one.png">
+                </div>
+                <div class="product_text">
+                  <p class="text_md">One year
+                    warranty </p>
+                </div>
+              </div>
+              <p class="text_reg">Replacement or fixing facility in case of damage during transit or usage.</p>
+            </div>
+            <div class="product_box">
+              <div class="product_img_text">
+                <div class="product_img">
+                   <div class="img-responsive gif ls-is-cached lazyloaded">
+                    {% render 'sv3' %}
+                  </div>
+                  <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_five.png" alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_five.png">
+                </div>
+                <div class="product_text">
+                  <p class="text_md">100% customer
+                    satisfaction rate</p>
+                </div>
+              </div>
+              <p class="text_reg">Rated with more than 1000+ 5-star reviews from our beloved customers. </p>
+            </div>
+            <div class="product_box">
+              <div class="product_img_text">
+                <div class="product_img">
+                 <div class="img-responsive gif ls-is-cached lazyloaded">
+                    {% render 'sv4' %}
+                  </div>
+                  <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_three.png" alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_three.png">
+                </div>
+                <div class="product_text">
+                  <p class="text_md">World-class
+                    craftsmanship</p>
+                </div>
+              </div>
+              <p class="text_reg">Each sign is handmade on order by highly trained neon sign artisans.</p>
+            </div>
+            <div class="product_box">
+              <div class="product_img_text">
+                <div class="product_img">
+                   <div class="img-responsive gif ls-is-cached lazyloaded">
+                    {% render 'sv5' %}
+                  </div>
+                  <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_five.png" alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_five.png">
+                </div>
+                <div class="product_text">
+                  <p class="text_md">Free + <span>Fast shipping</span>
+                  </p>
+                </div>
+              </div>
+              <p class="text_reg">Free shipping on all standard delivery orders irrespective of amount.</p>
+            </div>
+            <div class="product_box">
+              <div class="product_img_text">
+                <div class="product_img">
+                   <div class="img-responsive gif ls-is-cached lazyloaded">
+                    {% render 'sv6' %}
+                  </div>
+                  <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_six.png" alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_six.png">
+                </div>
+                <div class="product_text">
+                  <p class="text_md">Power- <span>efficient</span> </p>
+                </div>
+              </div>
+              <p class="text_reg">80% less power consumption than traditional glass neon signs.</p>
+            </div>
+            <div class="product_box">
+              <div class="product_img_text">
+                <div class="product_img">
+                   <div class="img-responsive gif ls-is-cached lazyloaded">
+                    {% render 'sv7' %}
+                  </div>
+                  <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_seven.png" alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_seven.png">
+                </div>
+                <div class="product_text">
+                  <p class="text_md">Easy <span>customizations</span></p>
+                </div>
+              </div>
+              <p class="text_reg">Efficient live preview technology to help you customise your neon sign. </p>
+            </div>
+          </div>
+          
+	</div>
+      
+	<div id="tab-2" class="tab-content">
+<div class="products_wrapper2">
+  <div class="products_detail">
+{%- if product.metafields.custom.description_text != blank -%}
+<div class='product_desc_text'>
+{{ product.metafields.custom.description_text }}
+</div>
+{%- endif -%}
+</div> 
+</div>   
+        
+	</div>
+	<div id="tab-3" class="tab-content">
+
+<div class="products_wrapper3">
+
+            <div class="products_detail">
+              <h2>What's in the kit?</h2>
+              <p class="text_reg">Our sign is made to enjoy straight from the box!</p>
+              <p class="text_reg">Every neon sign is mounted on clear acrylic for support and comes attached with
+                a power cord that is to be attached to the power adaptor. The acrylic board has pre-drilled holes
+                with SS mounting screws that allow you to hang it on your wall with ease.</p>
+              <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/crecite.png" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/crecite.png">
+            </div>
+         
+          <div class="pro">
+              <h2>About your neon sign</h2>
+              <p class="text_reg">Neon Attack's neon signs are made with advanced LED tubing that allows
+                them to be lightweight and flexible enough to be moulded into any design or shape.
+                The transparent acrylic backing is made with premium 6MM material.</p>
+              <div class="about_box">
+                <div class="new-box">
+                  <div class="box_img">
+                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_1.png" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_1.png">
+                  </div>
+                  <div class="box_text">
+                    <p class="text_md">Weight</p>
+                    <p class="text_reg">5-12 kg</p>
+                  </div>
+                </div>
+                <div class="new-box">
+                  <div class="box_img">
+                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_2.png" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_2.png">
+                  </div>
+                  <div class="box_text">
+                    <p class="text_md">Estimated usage</p>
+                    <p class="text_reg">50,000 hours</p>
+                  </div>
+                </div>
+                <div class="new-box">
+                  <div class="box_img">
+                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_3.png" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_3.png">
+                  </div>
+                  <div class="box_text border0">
+                    <p class="text_md">Power usage</p>
+                    <p class="text_reg">12 volts DC</p>
+                  </div>
+                </div>
+              </div>
+              <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/crecite.png" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/crecite.png">
+            </div>
+                   </div>
+      
+	</div>
+	<div id="tab-4" class="tab-content">
+
+<div class="products_wrapper4">
+
+            <div class="products_detail">
+              <h2>Here's how you can install our neon signs on your wall:</h2>
+              <div class="guide">
+                <div class="new-box">
+                  <div class="box_img"> 
+                    <img src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/guide_1.png?v=1677154203" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" >
+                  </div>
+                  <div class="box_text">
+                    <p class="text_md">Take a measuring tape and mark
+                      out the position of your neon sign. </p>
+                  </div>
+                </div>
+                <div class="new-box">
+                  <div class="box_img">
+                    <img style="margin-left:10px;" src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/guide_2.png?v=1677154202" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" >
+                  </div>
+                  <div class="box_text">
+                    <p class="text_md">Drill small holes on the wall.</p>
+                  </div>
+                </div>
+                <div class="new-box">
+                  <div class="box_img">
+                    <img src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/guide_3.png?v=1677154203" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" >
+                  </div>
+                  <div class="box_text">
+                    <p class="text_md">Use the SS mounting screws to mount
+                      your neon sign on the wall.</p>
+                  </div>
+                </div>
+                <div class="new-box">
+                  <div class="box_img">
+                    <img src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/guide_4.png?v=1677154203" alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy" >
+                  </div>
+                  <div class="box_text">
+                    <p class="text_md">Connect the power adapter to the
+                      transparent cable and your sign is ready! </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+	</div>
+
+</div>
+</div>
+
+       <div class='product-tabber-ph Phone page-width'>
+        <div class=" accordion">
+            <h2 class=" heading item">
+                <div class="mr-15 accordion-title"><span>Why Us</span></div>
+            </h2>
+            <div class=" contents">
+                <div class="rte  pt-10 pb-30">
+                    <div class="products_wrapper">
+                        <div class="product_box">
+                            <div class="product_img_text">
+                                <div class="product_img">  
+                                     <img 
+                                        alt="Banner Image" class=""
+                                        src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/why_icon_two.gif?v=1677231565">
+                                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_two.png"
+                                        alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded"
+                                        src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_two.png">
+                                </div>
+                                <div class="product_text">
+                                    <p class="text_md">Premium
+                                        quality</p>
+    <p class="text_reg">The best quality materials used to create the perfect sign for you. </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="product_box">
+                            <div class="product_img_text">
+                                <div class="product_img">
+                                     <img 
+                                        alt="Banner Image" class=""
+                                        src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/why_icon_one.gif?v=1677231564">
+                                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_one.png"
+                                        alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded"
+                                        src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_one.png">
+                                </div>
+                                <div class="product_text">
+                                    <p class="text_md">One year
+                                        warranty </p>
+     <p class="text_reg">Replacement or fixing facility in case of damage during transit or
+                                usage.</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="product_box">
+                            <div class="product_img_text">
+                                <div class="product_img">
+                                    <img
+                                        src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/why_icon_four.gif?v=1677231565">
+                                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_five.png"
+                                        alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded"
+                                        src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_five.png">
+                                </div>
+                                <div class="product_text">
+                                    <p class="text_md">100% customer
+                                        satisfaction rate</p>
+       <p class="text_reg">Rated with more than 1000+ 5-star reviews from our beloved customers.
+                            </p>
+                                </div>
+                            </div>
+                         
+                        </div>
+                        <div class="product_box">
+                            <div class="product_img_text">
+                                <div class="product_img">
+                                  <img
+                                        src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/why_icon_three.gif?v=1677231564">
+                                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_three.png"
+                                        alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded"
+                                        src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_three.png">
+                                </div>
+                                <div class="product_text">
+                                    <p class="text_md">World-class
+                                        craftsmanship</p>
+      <p class="text_reg">Each sign is handmade on order by highly trained neon sign artisans.</p>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="product_box">
+                            <div class="product_img_text">
+                                <div class="product_img">
+                                   <img
+                                        src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/why_icon_five.gif?v=1677231565">
+                                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_five.png"
+                                        alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded"
+                                        src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_five.png">
+                                </div>
+                                <div class="product_text">
+                                    <p class="text_md">Free + <span>Fast shipping</span>
+                                    </p>
+    <p class="text_reg">Free shipping on all standard delivery orders irrespective of amount.
+                            </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="product_box">
+                            <div class="product_img_text">
+                                <div class="product_img">
+                                   <img
+                                        src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/why_icon_six.gif?v=1677231564">
+                                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_six.png"
+                                        alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded"
+                                        src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_six.png">
+                                </div>
+                                <div class="product_text">
+                                    <p class="text_md">Power- <span>efficient</span> </p>
+     <p class="text_reg">80% less power consumption than traditional glass neon signs.</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="product_box">
+                            <div class="product_img_text">
+                                <div class="product_img">
+                                    <img
+                                        src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/why_icon_seven.gif?v=1677231564">
+                                    <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_seven.png"
+                                        alt="Banner Image" class="img-responsive why_bg ls-is-cached lazyloaded"
+                                        src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/why_bg_seven.png">
+                                </div>
+                                <div class="product_text">
+                                    <p class="text_md">Easy <span>customizations</span></p>
+       <p class="text_reg">Efficient live preview technology to help you customise your neon sign.
+                            </p>
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class=" heading item">
+                <div class="mr-15 accordion-title"><span>Product Description</span></div>
+            </h2>
+            <div class="contents">
+                <div class="rte  pt-10 pb-30">
+                    <div class="products_wrapper2">
+                        <div class="products_detail">
+                            {%- if product.metafields.custom.description_text != blank -%}
+                            <div class='product_desc_text'>
+                                {{ product.metafields.custom.description_text }}
+                            </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class=" heading item">
+                <div class="mr-15 accordion-title"><span>What does the kit contain?</span></div>
+            </h2>
+            <div class="contents">
+                <div class="rte  pt-10 pb-30">
+
+                    <div class="products_wrapper3">
+
+                        <div class="products_detail">
+                            <h2>What's in the kit?</h2>
+                            <p class="text_reg">Our sign is made to enjoy straight from the box!</p>
+                            <p class="text_reg">Every neon sign is mounted on clear acrylic for support and comes
+                                attached with
+                                a power cord that is to be attached to the power adaptor. The acrylic board has
+                                pre-drilled
+                                holes
+                                with SS mounting screws that allow you to hang it on your wall with ease.</p>
+                            <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/crecite.png" alt="weight"
+                                class="img-responsive ls-is-cached lazyloaded" loading="lazy"
+                                src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/crecite.png">
+                        </div>
+
+                        <div class="pro">
+                            <h2>About your neon sign</h2>
+                            <p class="text_reg">Neon Attack's neon signs are made with advanced LED tubing that allows
+                                them to be lightweight and flexible enough to be moulded into any design or shape.
+                                The transparent acrylic backing is made with premium 6MM material.</p>
+                            <div class="about_box">
+                                <div class="new-box">
+                                    <div class="box_img">
+                                        <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_1.png"
+                                            alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy"
+                                            src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_1.png">
+                                    </div>
+                                    <div class="box_text">
+                                        <p class="text_md">Weight</p>
+                                        <p class="text_reg">5-12 kg</p>
+                                    </div>
+                                </div>
+                                <div class="new-box">
+                                    <div class="box_img">
+                                        <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_2.png"
+                                            alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy"
+                                            src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_2.png">
+                                    </div>
+                                    <div class="box_text">
+                                        <p class="text_md">Estimated usage</p>
+                                        <p class="text_reg">50,000 hours</p>
+                                    </div>
+                                </div>
+                                <div class="new-box">
+                                    <div class="box_img">
+                                        <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_3.png"
+                                            alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy"
+                                            src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/about_icon_3.png">
+                                    </div>
+                                    <div class="box_text border0">
+                                        <p class="text_md">Power usage</p>
+                                        <p class="text_reg">12 volts DC</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <img data-src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/crecite.png" alt="weight"
+                                class="img-responsive ls-is-cached lazyloaded" loading="lazy"
+                                src="//cdn.shopify.com/s/files/1/0460/2753/8595/files/crecite.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class=" heading item">
+                <div class="mr-15 accordion-title"><span>Product Installation Guide</span></div>
+            </h2>
+            <div class="contents">
+                <div class="rte  pt-10 pb-30">
+                    <div class="products_wrapper4">
+
+                        <div class="products_detail">
+                            <h2>Here's how you can install our neon signs on your wall:</h2>
+                            <div class="guide">
+                                <div class="new-box">
+                                    <div class="box_img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/guide_1.png?v=1677154203"
+                                            alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy">
+                                    </div>
+                                    <div class="box_text">
+                                        <p class="text_md">Take a measuring tape and mark
+                                            out the position of your neon sign. </p>
+                                    </div>
+                                </div>
+                                <div class="new-box">
+                                    <div class="box_img">
+                                        <img 
+                                            src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/guide_2.png?v=1677154202"
+                                            alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy">
+                                    </div>
+                                    <div class="box_text">
+                                        <p class="text_md">Drill small holes on the wall.</p>
+                                    </div>
+                                </div>
+                                <div class="new-box">
+                                    <div class="box_img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/guide_3.png?v=1677154203"
+                                            alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy">
+                                    </div>
+                                    <div class="box_text">
+                                        <p class="text_md">Use the SS mounting screws to mount
+                                            your neon sign on the wall.</p>
+                                    </div>
+                                </div>
+                                <div class="new-box">
+                                    <div class="box_img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0719/8520/1459/files/guide_4.png?v=1677154203"
+                                            alt="weight" class="img-responsive ls-is-cached lazyloaded" loading="lazy">
+                                    </div>
+                                    <div class="box_text">
+                                        <p class="text_md">Connect the power adapter to the
+                                            transparent cable and your sign is ready! </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+    
+            <div class="container accordion-section container--sm faqs items page-width"   style="background-color:black;">
+        <h2 class = "faq-heading">FAQs</h2>
+         <span class = "faq-description">Frequently Asked Questions</span>
+          <div class = " accordion">
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>What color can I choose?</span></div> </h2>
+                <div class=" contents">
+                    <div class="rte  pt-10 pb-30">
+                        Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>What if I want a sign that I can't create using your custom tool?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                         Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>How do I hang / wall mount my neon light?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                        Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>What if my sign is damaged in transit?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                        Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>What are your payment and billing T&C's?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                         Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>What if my sign is damaged in transit?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                        Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>How do I hang / wall mount my neon light?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                         Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>What if my sign is damaged in transit?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                        Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>What if my sign is damaged in transit?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                        Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>How do I hang / wall mount my neon light?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                        Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>What if my sign is damaged in transit?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                         Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+                <h2 class=" heading item"><div class="mr-15 accordion-title"><span>How do I hang / wall mount my neon light?</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                       Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.
+                    </div>
+                </div>
+          </div>
+    </div>
+   </div>
+
+<!--     <script>
+  $(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+</script>
+      -->

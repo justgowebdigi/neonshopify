@@ -1,0 +1,504 @@
+
+<div class = "neon-up-section warpper" id = "neon">
+   <h2 class = "page-width">{{ section.settings.text }}</h2>
+   <span class = " page-width">{{ section.settings.para }}</span>
+   <input class="radio" id="one" name="group" type="radio" checked>
+   <input class="radio" id="two" name="group" type="radio">
+   <input class="radio" id="three" name="group" type="radio">
+   <input class="radio" id="four" name="group" type="radio">
+   <input class="radio" id="five" name="group" type="radio">
+   <input class="radio" id="six" name="group" type="radio">
+   <input class="radio" id="seven" name="group" type="radio">
+   <div class="tabs page-width">
+     {% if section.settings.firsttab != blank %} <label class="tab" id="one-tab" for="one">{{ section.settings.firsttab }}</label>{% endif %}
+     {% if section.settings.secondtab != blank %}<label class="tab" id="two-tab" for="two">{{ section.settings.secondtab }}</label>{% endif %}
+     {% if section.settings.thirdtab != blank %} <label class="tab" id="three-tab" for="three">{{ section.settings.thirdtab }}</label>{% endif %}
+     {% if section.settings.fourthtab != blank %} <label class="tab" id="four-tab" for="four">{{ section.settings.fourthtab }}</label>{% endif %}
+     {% if section.settings.fifthtab != blank %} <label class="tab" id="five-tab" for="five">{{ section.settings.fifthtab }}</label>{% endif %}
+     {% if section.settings.sixthtab != blank %} <label class="tab" id="six-tab" for="six">{{ section.settings.sixthtab }}</label>{% endif %}
+     {% if section.settings.seventhtab %} <label class="tab" id="seven-tab" for="seven">{{ section.settings.seventhtab }}</label>{% endif %}
+   </div>
+   <div class="panels ">
+      <div class="panel " id="one-panel">
+         <div class="container-fluid">
+            <div class="container">
+               <div class="row">
+                  <div class="slider-services">
+                     {% assign text_blocks = section.blocks | where: 'type', 'Room' %}
+                     {%- for block in text_blocks -%}
+                     <div class = " col-xs-12 col-sm-6 col-md-4">
+                        <div class = "slickitem">
+                           <a href = "{{ block.settings.link }}" class = "category-link ">
+                              <div class = "category-img">
+                                 <img srcset = "{{ block.settings.img | img_url: '1920x'}}">
+                              </div>
+                              <div class = "neon-name medium">
+                                 {{ block.settings.name }}
+                              </div>
+                              <div class = "paragraph">
+                                 {{ block.settings.para }}
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel " id="two-panel">
+         <div class="container-fluid">
+            <div class="container">
+               <div class="row">
+                  <div class="slider-services">
+                     {% assign text_blocks = section.blocks | where: 'type', 'Place' %}
+                     {%- for block in text_blocks -%}
+                     <div class = " col-xs-12 col-sm-6 col-md-4">
+                        <div class = "slickitem">
+                           <a href = "{{ block.settings.link2 }}" class = "category-link ">
+                              <div class = "category-img">
+                                 <img srcset = "{{ block.settings.img2 | img_url: '1920x'}}">
+                              </div>
+                              <div class = "neon-name medium">
+                                 {{ block.settings.name2 }}
+                              </div>
+                              <div class = "paragraph">
+                                 {{ block.settings.para2 }}
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+      <div class="panel" id="three-panel">
+         <div class="container-fluid">
+            <div class="container">
+               <div class="row">
+                  <div class="slider-services">
+                     {% assign faqs_blocks = section.blocks | where: 'type', 'Occasion' %}
+                     {%- for block in faqs_blocks -%}
+                     <div class = "col-xs-12 col-sm-6 col-md-4">
+                        <div class = "slickitem">
+                           <a href = "{{ block.settings.link1 }}" class = "category-link ">
+                              <div class = "category-img">
+                                 <img srcset ="{{ block.settings.img1 | img_url: '1920x'}}">
+                              </div>
+                              <div class = "neon-name medium">
+                                 {{ block.settings.name1 }}
+                              </div>
+                              <div class = "paragraph">
+                                 {{ block.settings.para1 }}
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+           <div class="panel" id="four-panel">
+         <div class="container-fluid">
+            <div class="container">
+               <div class="row">
+                  <div class="slider-services">
+                     {% assign faqs_blocks = section.blocks | where: 'type', 'option-4' %}
+                     {%- for block in faqs_blocks -%}
+                     <div class = "col-xs-12 col-sm-6 col-md-4">
+                        <div class = "slickitem">
+                           <a href = "{{ block.settings.link4 }}" class = "category-link ">
+                              <div class = "category-img">
+                                 <img srcset ="{{ block.settings.img4 | img_url: '1920x'}}">
+                              </div>
+                              <div class = "neon-name medium">
+                                 {{ block.settings.name4 }}
+                              </div>
+                              <div class = "paragraph">
+                                 {{ block.settings.para4 }}
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+                <div class="panel" id="five-panel">
+         <div class="container-fluid">
+            <div class="container">
+               <div class="row">
+                  <div class="slider-services">
+                     {% assign faqs_blocks = section.blocks | where: 'type', 'option-5' %}
+                     {%- for block in faqs_blocks -%}
+                      <div class = "col-xs-12 col-sm-6 col-md-4">
+                       <div class = "slider-item">
+                        <div class = "slickitem">
+                           <a href = "{{ block.settings.link5 }}" class = "category-link ">
+                              <div class = "category-img">
+                                 <img srcset ="{{ block.settings.img5 | img_url: '1920x'}}">
+                              </div>
+                              <div class = "neon-name medium">
+                                 {{ block.settings.name5 }}
+                              </div>
+                              <div class = "paragraph">
+                                 {{ block.settings.para5 }}
+                              </div>
+                           </a>
+                        </div>
+                       </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="panel" id="six-panel">
+         <div class="container-fluid">
+            <div class="container">
+               <div class="row">
+                  <div class="slider-services">
+                     {% assign faqs_blocks = section.blocks | where: 'type', 'option-6' %}
+                     {%- for block in faqs_blocks -%}
+                     <div class = "col-xs-12 col-sm-6 col-md-4">
+                        <div class = "slickitem">
+                           <a href = "{{ block.settings.link6 }}" class = "category-link ">
+                              <div class = "category-img">
+                                 <img srcset ="{{ block.settings.img6 | img_url: '1920x'}}">
+                              </div>
+                              <div class = "neon-name medium">
+                                 {{ block.settings.name6 }}
+                              </div>
+                              <div class = "paragraph">
+                                 {{ block.settings.para6 }}
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+           <div class="panel" id="seven-panel">
+         <div class="container-fluid">
+            <div class="container">
+               <div class="row">
+                  <div class="slider-services">
+                     {% assign faqs_blocks = section.blocks | where: 'type', 'option-7' %}
+                     {%- for block in faqs_blocks -%}
+                     <div class = "col-xs-12 col-sm-6 col-md-4">
+                        <div class = "slickitem">
+                           <a href = "{{ block.settings.link7 }}" class = "category-link ">
+                              <div class = "category-img">
+                                 <img srcset ="{{ block.settings.img7 | img_url: '1920x'}}">
+                              </div>
+                              <div class = "neon-name medium">
+                                 {{ block.settings.name7 }}
+                              </div>
+                              <div class = "paragraph">
+                                 {{ block.settings.para7 }}
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+
+{% schema %}
+{
+  "name": "neon-up-section",
+    "max_blocks": 50,
+    "blocks": [
+  {
+    "type": "Room",
+    "name": "Room",
+    "settings": [
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name",
+          "type": "text",
+          "label": "Enter Category Name"
+        },
+       {
+          "id": "para",
+          "type": "text",
+          "label": "Enter Paragraph"
+        }
+      ]
+  },
+  {
+    "type": "Place",
+    "name": "Place ",
+    "settings": [
+        {
+          "id": "link2",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img2",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name2",
+          "type": "text",
+          "label": "Enter Category Name"
+        },
+        {
+          "id": "para2",
+          "type": "text",
+          "label": "Enter Paragraph"
+        }
+      ]
+  },
+        {
+    "type": "Occasion",
+    "name": "Occasion ",
+    "settings": [
+        {
+          "id": "link1",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img1",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name1",
+          "type": "text",
+          "label": "Enter Category Name"
+        },
+             {
+          "id": "para1",
+          "type": "text",
+          "label": "Enter Paragraph"
+        }
+      ]
+  },
+  {
+    "type": "option-4",
+    "name": "option-4 ",
+    "settings": [
+        {
+          "id": "link4",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img4",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name4",
+          "type": "text",
+          "label": "Enter Category Name"
+        },
+             {
+          "id": "para4",
+          "type": "text",
+          "label": "Enter Paragraph"
+        }
+      ]
+  },
+   {
+    "type": "option-5",
+    "name": "option-5 ",
+    "settings": [
+        {
+          "id": "link5",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img5",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name5",
+          "type": "text",
+          "label": "Enter Category Name"
+        },
+             {
+          "id": "para5",
+          "type": "text",
+          "label": "Enter Paragraph"
+        }
+      ]
+  },
+     {
+    "type": "option-6",
+    "name": "option-6 ",
+    "settings": [
+        {
+          "id": "link6",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img6",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name6",
+          "type": "text",
+          "label": "Enter Category Name"
+        },
+             {
+          "id": "para6",
+          "type": "text",
+          "label": "Enter Paragraph"
+        }
+      ]
+  },
+       {
+    "type": "option-7",
+    "name": "option-7 ",
+    "settings": [
+        {
+          "id": "link7",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img7",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name7",
+          "type": "text",
+          "label": "Enter Category Name"
+        },
+             {
+          "id": "para7",
+          "type": "text",
+          "label": "Enter Paragraph"
+        }
+      ]
+  }
+],
+  "settings": [
+{
+  "id": "text",
+  "type": "text",
+  "label": "Enter Heading"
+},
+ {
+  "id": "firsttab",
+  "type": "text",
+  "label": "Enter First Tabber Heading"
+},
+ {
+  "id": "secondtab",
+  "type": "text",
+  "label": "Enter Second Tabber Heading"
+},
+  {
+  "id": "thirdtab",
+  "type": "text",
+  "label": "Enter Third Tabber Heading"
+},
+ {
+  "id": "fourthtab",
+  "type": "text",
+  "label": "Enter Fourth Tabber Heading"
+},
+ {
+  "id": "fifthtab",
+  "type": "text",
+  "label": "Enter Fifth Tabber Heading"
+},
+  {
+  "id": "sixthtab",
+  "type": "text",
+  "label": "Enter Sixth Tabber Heading"
+},
+  {
+  "id": "seventhtab",
+  "type": "text",
+  "label": "Enter Third Tabber Heading"
+}
+  ], 
+
+"presets":[
+{"name":"neon-up-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}
+
+<script>
+$(function() {
+  $('.slider-services').slick({
+    dots: false,
+    appendDots: '.slider-dots',
+    arrows: true,
+		infinite: false,
+		slidesToScroll: 1,
+		slidesToShow: 3,
+		accessibility: true,
+		 variableWidth: true,
+		focusOnSelect: false,
+		centerMode: false,
+       prevArrow: '<button type="button" class="slick-custom-arrow slick-prev"><img src = "https://cdn.shopify.com/s/files/1/0587/7350/4182/files/Component_31_4.webp?v=1670243045"> </button>',
+       nextArrow: '<button type="button" class="slick-custom-arrow slick-next"> <img src = "https://cdn.shopify.com/s/files/1/0587/7350/4182/files/Component_31_3.webp?v=1670243062"> </button>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToScroll: 1,
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToScroll: 1,
+					slidesToShow: 1.7,
+                    arrows: false
+				}
+			}
+		]
+  });
+});  
+
+</script>
+

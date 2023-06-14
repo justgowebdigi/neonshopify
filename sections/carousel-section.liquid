@@ -1,0 +1,231 @@
+<style>
+  #home-carousel  .owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.owl-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #000;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+ #home-carousel .owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.38) !important;
+      height: max-content;
+}
+.owl-slider span {
+    font-size: 40px;    
+    position: relative;
+    top: -5px;
+  padding: 0px 10px;
+}
+.owl-nav button:focus {
+    outline: none;
+}
+  .description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    bottom: 40px;
+}
+ #home-carousel .item{position: relative;}
+  
+  span.Neon-up-your-life {
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+  span.text-style-1 {
+    font-weight: 400;
+    color: #f7ff16;
+    font-size: 108px;
+    font-family: 'Qwitcher Grypen', cursive;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+  .about{
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  .heading {
+    line-height: 50px;
+}
+  @media(min-width: 768px){
+     #home-carousel .owl-nav button.owl-prev {
+    left: 250px;
+    background: whitesmoke !important;
+    color: orange !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+ #home-carousel .owl-nav button.owl-next {
+  right: 240px;
+  background: whitesmoke !important;
+  color: orange !important;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+  }
+  @media(max-width: 767px){
+     #home-carousel .owl-nav button.owl-prev {
+    left: 14%;
+    background: whitesmoke !important;
+    color: orange !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+ #home-carousel .owl-nav button.owl-next {
+  right: 14%;
+  background: whitesmoke !important;
+  color: orange !important;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+    .description {display: none ;}
+/*     .category-link .item img.lazyloaded {
+    height: 400px;
+} */
+  }
+</style>
+<div class="owl-slider" id = "home-carousel">
+        <div id="carousel" class="owl-carousel">
+          {%- for block in section.blocks -%}
+           <a href = "{{ block.settings.link }}" class = "category-link medium">
+            <div class="item">
+                 <img class=" desktop" src="{{ block.settings.img | img_url: '1920x'}}">
+                 <img class=" mobile" src="{{ block.settings.img1 | img_url: '1920x'}}">
+              <div class = "description">
+                <div class = "heading">
+                <span class = "Neon-up-your-life"> {{ block.settings.name }}</span> <span class = "text-style-1">{{ block.settings.name1 }}</span>
+                </div>
+                <div class = "about">
+                  {{ block.settings.description }}
+                </div>
+              </div>
+            </div>
+           </a>
+          {% endfor %}
+        </div>
+        </div>
+
+
+{% schema %}
+{
+  "name": "carousel-section",
+    "blocks": [
+    {
+      "type": "block",
+      "name": "Add Block",
+      "settings": [
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img",
+          "type": "image_picker",
+          "label" : "Select Desktop Image"
+        },
+          {
+          "id": "img1",
+          "type": "image_picker",
+          "label" : "Select Mobile Image"
+        },
+        {
+          "id": "name",
+          "type": "text",
+          "label": "Enter First Heading"
+        },
+         {
+          "id": "name1",
+          "type": "text",
+          "label": "Enter Second Heading"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "label": "Enter Description"
+        }
+        
+      ]
+    }
+  ],
+  "settings": [
+
+  ], 
+
+"presets":[
+{"name":"carousel-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}
+
+    <script>
+jQuery("#carousel").owlCarousel({
+  autoplay: false,
+  margin: 20,
+  loop: true,
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 800,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1,
+  stagePadding: 40,
+      nav: false
+    },
+
+    600: {
+      items: 1,
+      stagePadding: 80,
+      nav: false
+    },
+    1366: {
+      items: 1,
+  stagePadding: 250
+      
+    }
+  }
+});
+      </script>  

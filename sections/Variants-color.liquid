@@ -1,0 +1,136 @@
+<style>
+{% for block in section.blocks %}  
+[color-name="{{ block.settings.name }}"] ~ .color-box,[color-name="{{ block.settings.name }}"]{
+background-color:{{ block.settings.bg}} !important;
+}
+  [color-name="{{ block.settings.name1 }}"] ~ .color-box,[color-name="{{ block.settings.name1 }}"]{
+background-color:{{ block.settings.bg1}} !important;
+}
+  [color-name="{{ block.settings.name2 }}"] ~ .color-box,[color-name="{{ block.settings.name2 }}"]{
+background-color:{{ block.settings.bg2 }} !important;
+}
+[color-name="{{ block.settings.name3 }}"] ~ .color-box,[color-name="{{ block.settings.name3 }}"]{
+background-color:{{ block.settings.bg3 }} !important;
+}
+[color-name="{{ block.settings.name4 }}"] ~ .color-box,[color-name="{{ block.settings.name4 }}"]{
+background-color:{{ block.settings.bg4 }} !important;
+}
+[color-name="{{ block.settings.name5 }}"] ~ .color-box, [color-name="{{ block.settings.name5 }}"]{
+background-color:{{ block.settings.bg5 }} !important;
+}
+[color-name="{{ block.settings.name6 }}"] ~ .color-box,[color-name="{{ block.settings.name6 }}"]{
+background-color:{{ block.settings.bg6 }} !important;
+}
+{% endfor %}
+</style>
+{% schema %}
+ {
+  "name": "Variants Color",
+	"max_blocks": 20,
+  "settings": [
+  
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Add Color",
+      "settings": [
+ 		{
+       "id": "name",
+      "type": "text",
+      "label": "Color Name"
+        },
+        {
+       "id": "bg",
+      "type": "color",
+      "label": "Color Code"
+        },
+{
+       "id": "name1",
+      "type": "text",
+      "label": "Color Name"
+        },
+        {
+       "id": "bg1",
+      "type": "color",
+      "label": "Color Code"
+        },
+
+ 		{
+       "id": "name2",
+      "type": "text",
+      "label": "Color Name"
+        },
+        {
+       "id": "bg2",
+      "type": "color",
+      "label": "Color Code"
+        },
+{
+       "id": "name3",
+      "type": "text",
+      "label": "Color Name"
+        },
+        {
+       "id": "bg3",
+      "type": "color",
+      "label": "Color Code"
+        },
+
+{
+       "id": "name4",
+      "type": "text",
+      "label": "Color Name"
+        },
+        {
+       "id": "bg4",
+      "type": "color",
+      "label": "Color Code"
+        },
+ 		{
+       "id": "name5",
+      "type": "text",
+      "label": "Color Name"
+        },
+        {
+       "id": "bg5",
+      "type": "color",
+      "label": "Color Code"
+        },
+{
+       "id": "name6",
+      "type": "text",
+      "label": "Color Name"
+        },
+        {
+       "id": "bg6",
+      "type": "color",
+      "label": "Color Code"
+        }
+
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Variants Color",
+      "category": "Variants Color",
+      "blocks": [
+        { 
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

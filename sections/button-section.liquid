@@ -1,0 +1,51 @@
+<div class = "container">
+<div class = "all-button">
+<a href = "{{ section.settings.link1 }}" class = "link upload-button"> {{ section.settings.text }}</a>
+  <a href = "{{ section.settings.link2 }}" class = "link upload-button">{{ section.settings.text1 }}</a>
+  <a href = "{{ section.settings.link3 }}" class = "link no-bg">{{ section.settings.text2 }}</a>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "button-section",
+  "settings": [
+{
+  "id": "link1",
+  "type": "url",
+  "label": "Enter Link"
+},
+  {
+  "id": "text",
+  "type": "text",
+  "label": "Enter Button Text"
+},
+    {
+  "id": "link2",
+  "type": "url",
+  "label": "Enter Link"
+},
+      {
+  "id": "text1",
+  "type": "text",
+  "label": "Enter Button Text"
+},
+    {
+  "id": "link3",
+  "type": "url",
+  "label": "Enter Link"
+},
+      {
+  "id": "text2",
+  "type": "text",
+  "label": "Enter Button Text"
+}
+  ], 
+
+"presets":[
+{"name":"button-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

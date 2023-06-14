@@ -1,0 +1,91 @@
+
+
+<div class = "box-section text-section ">
+   <div class = "row">
+      <div class = "first-col">
+         <div class = "main-img-box">
+           <img src = "{{ section.settings.img | img_url:'1920x'}}" class="dsk">
+           <img src = "{{ section.settings.img11 | img_url:'1920x'}}" class="phn">
+            <span class = "img-text">
+              {{ section.settings.text }}
+            </span>  
+         </div>
+      </div>
+      <div class = "second-col">
+         <div class = "main-img-box mb-25">
+            <img src = "{{ section.settings.img1 | img_url:'1920x'}}" class="dsk">
+            <img src = "{{ section.settings.img12 | img_url:'1920x'}}" class="phn">
+            <span class = "img-text">
+              {{ section.settings.text1 }}
+            </span>  
+         </div>
+         <div class = "main-img-box">
+            <img src = "{{ section.settings.img2 | img_url:'1920x'}}" class="dsk">
+            <img src = "{{ section.settings.img13 | img_url:'1920x'}}" class="phn">
+            <span class = "img-text ">
+            {{ section.settings.text2 }}
+            </span>  
+         </div>
+      </div>
+   </div>
+</div>
+
+{% schema %}
+{
+  "name": "box-section",
+  "settings": [
+    {
+      "id": "img",
+      "label": "Select Desktop Image 1",
+      "type": "image_picker"
+    },
+    {
+      "id": "img11",
+      "label": "Select Phone Image 1",
+      "type": "image_picker"
+    },
+    {
+    "id": "text",
+    "type": "richtext",
+    "label": "Enter Text"
+  },
+        {
+      "id": "img1",
+      "label": "Select Desktop Image 2",
+      "type": "image_picker"
+    },
+    {
+      "id": "img12",
+      "label": "Select Phone Image 2",
+      "type": "image_picker"
+    },
+    {
+    "id": "text1",
+    "type": "richtext",
+    "label": "Enter Text"
+  }, 
+    {
+      "id": "img2",
+      "label": "Select Desktop Image 3",
+      "type": "image_picker"
+    },
+    {
+      "id": "img13",
+      "label": "Select Phone Image 3",
+      "type": "image_picker"
+    },
+    {
+    "id": "text2",
+    "type": "richtext",
+    "label": "Enter Text"
+  }
+  ], 
+
+"presets":[
+{
+  "name":"box-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

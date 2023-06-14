@@ -1,0 +1,124 @@
+<style>
+ .inner-sect{
+   display:grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+   column-gap:35px;
+   padding:50px 0px;
+ }
+  @media screen and (max-width:540px){
+    .inner-sect{
+    grid-template-columns: 1fr !important;
+   row-gap:35px;
+ }
+  }
+  .image-container1 img{
+    width:100%;
+    height:100%;
+     border-radius:10px;
+  }
+  .title1{
+    padding-top:26px;
+    font-size:16px !important;
+    font-weight:700;
+  }
+  .links{
+    color:#333333;
+    text-align:center;
+  }
+
+  
+</style>
+<div class = "page-width">
+  <div class='inner-sect'>   
+    <div class='gallery-items'>
+      <a class='links' href='{{ section.settings.link1 }}'>
+         <div class = "image-container1">
+         <img src = "{{ section.settings.img1 | img_url: '1920x' }}">
+          <p class='title1' >{{ section.settings.text1 }}</p>
+         </div>
+          </a>
+    </div>
+     <div class='gallery-items'>
+      <a class='links' href='{{ section.settings.link2 }}'>
+         <div class = "image-container1">
+         <img src = "{{ section.settings.img2 | img_url: '1920x' }}">
+          <p class='title1' >{{ section.settings.text2 }}</p>
+         </div>
+          </a>
+    </div>
+     <div class='gallery-items'>
+      <a class='links' href='{{ section.settings.link3 }}'>
+         <div class = "image-container1">
+         <img src = "{{ section.settings.img3 | img_url: '1920x' }}">
+          <p class='title1' >{{ section.settings.text3 }}</p>
+         </div>
+          </a>
+    </div>
+        
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "gallery-block",
+  "settings": [
+      {
+        "id": "img1",
+        "type": "image_picker",
+        "label": "Select First Image"
+      },
+      {
+        "id": "text1",
+        "type": "text",
+        "label": "Enter Title"
+      },
+      {
+        "id": "link1",
+        "type": "url",
+        "label": "Enter Link"
+      },
+       {
+        "id": "img2",
+        "type": "image_picker",
+        "label": "Select Second Image"
+      },
+      {
+        "id": "text2",
+        "type": "text",
+        "label": "Enter Title"
+      },
+      {
+        "id": "link2",
+        "type": "url",
+        "label": "Enter Link"
+      },
+       {
+        "id": "img3",
+        "type": "image_picker",
+        "label": "Select Third Image"
+      },
+      {
+        "id": "text3",
+        "type": "text",
+        "label": "Enter Title"
+      },
+      {
+        "id": "link3",
+        "type": "url",
+        "label": "Enter Link"
+      }
+  ], 
+  "presets":[
+        {"name":"gallery-block",
+        "category":"section"
+        }
+      ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

@@ -1,0 +1,89 @@
+<style>
+  .blog-image-section.container-fluid{
+    padding:0px !important;
+  }
+  .blog-banner{
+    width:100%;
+    position:relative;
+  }
+  .blog-banner img{
+    width:100%;
+    height:100%;
+  }
+  .desc-box{
+    position:absolute;
+    width:280px;
+    height:150px;
+    background-color:#ffebf1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+  }
+  @media screen and (max-width:540px){
+    .desc-box{
+      width:100%;
+      position:relative;
+    }
+  }
+   .desc-box h3{
+     font-weight:700;
+   }
+  .desc-box p{
+     
+   }
+</style>
+
+<div class = "blog-image-section container-fluid">
+<div class = "blog-banner">
+   <img class="lazyload desktop" data-src="{{ section.settings.img | img_url: '1920x'}}">
+   <img class="lazyload mobile" data-src="{{ section.settings.img1 | img_url: '1920x'}}">
+  <div class = "desc-box">
+    <h3>{{ section.settings.desc-title }}</h3>
+    <p>{{ section.settings.desc-content }}</p>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+{% schema %}
+{
+  "name": "blog-image-section",
+  "settings": [
+{
+  "id": "img",
+  "type": "image_picker",
+  "label": "Select Desktop Banner Image"
+},
+{
+  "id": "img1",
+  "type": "image_picker",
+  "label": "Select Mobile  Banner Image"
+},        
+ {
+  "id": "desc-title",
+  "type": "text",
+  "label": "Enter Description Title"
+},        
+ {
+  "id": "desc-content",
+  "type": "text",
+  "label": "Enter Description Content"
+}
+    
+  ], 
+
+"presets":[
+{
+  "name":"blog-image-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

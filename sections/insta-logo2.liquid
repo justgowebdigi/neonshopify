@@ -1,0 +1,36 @@
+<style>
+  .logo-section.second{
+    margin-top:50px !important;
+     margin-bottom:55px !important;
+  }
+</style>
+
+<div class = "logo-section second">
+       <div class="circle">
+	<div class="logo"> </div>
+	<div class="feedtext">	
+      <p><span style="transform:rotate(0deg)">.</span><span style="transform:rotate(15deg)"> </span><span style="transform:rotate(30deg)">F</span><span style="transform:rotate(45deg)">O</span><span style="transform:rotate(60deg)">L</span><span style="transform:rotate(75deg)">L</span><span style="transform:rotate(90deg)">O</span><span style="transform:rotate(105deg)">W</span><span style="transform:rotate(120deg)"> </span><span style="transform:rotate(135deg)">U</span><span style="transform:rotate(150deg)">S</span><span style="transform:rotate(165deg)"> </span><span style="transform:rotate(180deg)">.</span><span style="transform:rotate(195deg)"> </span><span style="transform:rotate(210deg)">F</span><span style="transform:rotate(225deg)">O</span><span style="transform:rotate(240deg)">L</span><span style="transform:rotate(255deg)">L</span><span style="transform:rotate(270deg)">O</span><span style="transform:rotate(285deg)">W</span><span style="transform:rotate(300deg)"> </span><span style="transform:rotate(315deg)">U</span><span style="transform:rotate(330deg)">S</span></p>
+	</div>
+</div>
+{{ section.settings.text }}
+</div>
+<div id="insta-feed"></div>
+
+{% schema %}
+{
+  "name": "instagram-logo2",
+  "settings": [
+{
+  "id": "text",
+  "type": "html",
+  "label": "Enter Text"
+}
+  ], 
+
+"presets":[
+{"name":"instagram-logo2",
+"category":"shop"
+}
+]
+}
+{% endschema %}

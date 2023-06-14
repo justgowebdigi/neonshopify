@@ -1,0 +1,103 @@
+<div class = "instagram-section">
+  <div class="marquee  enable-animation">
+       <div class = "marquee__content">
+        <span class = "first-color color-width">
+      </span>
+      <span class = "second-color color-width">
+      </span>
+      <span class = "third-color color-width">
+      </span>
+      <span class = "fourth-color color-width">
+      </span>
+       </div>
+
+       <div  aria-hidden="true" class="marquee__content">
+        <div class = "first-color color-width">
+      </div>
+      <div class = "second-color color-width">
+      </div>
+      <div class = "third-color color-width">
+      </div>
+      <div class = "fourth-color color-width">
+      </div>
+       </div>
+  </div>
+
+<div class = "container-fluid instagram">
+  <div class = "page-width ">
+       <div class="circle">
+	<div class="logo"> </div>
+	<div class="text">
+		<p>
+         . VIBIN GLOW
+         . VIBIN GLOW
+        </p>
+	</div>
+</div>
+ <p class = "first-paragraph">{{ section.settings.text }}</p>
+  <div  id="instagram-feed-box"></div>
+<div id="instagram-stories-box"></div>
+  <p class = "second-paragraph">{{ section.settings.description }}</p>
+           <div class = "ctitle"> 
+       <a href = "{{ section.settings.link2 }}" ><button>{{ section.settings.button_text1 }}</button></a>
+      </div>
+</div>
+</div>
+  <div class="marquee  enable-animation">
+       <div class = "marquee__content">
+        <span class = "first-color color-width">
+      </span>
+      <span class = "second-color color-width">
+      </span>
+      <span class = "third-color color-width">
+      </span>
+      <span class = "fourth-color color-width">
+      </span>
+       </div>
+
+       <div  aria-hidden="true" class="marquee__content">
+        <div class = "first-color color-width">
+      </div>
+      <div class = "second-color color-width">
+      </div>
+      <div class = "third-color color-width">
+      </div>
+      <div class = "fourth-color color-width">
+      </div>
+       </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "instagram-section",
+  "settings": [
+    {
+  "id": "img",
+  "type": "image_picker",
+  "label": "Select  Image"
+}, 
+    {
+  "id": "text",
+  "type": "html",
+  "label": "Enter Text"
+},
+    {
+  "id": "description",
+  "type": "html",
+  "label": "Enter Text"
+},
+    
+    {
+  "id": "button_text1",
+  "type": "text",
+  "label": "Enter First Button Text"
+}
+  ], 
+
+"presets":[
+{"name":"instagram-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

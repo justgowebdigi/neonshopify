@@ -1,0 +1,185 @@
+<div style="max-width:1920px;margin:auto;">
+ <h2 class = "reviews-heading">{{ section.settings.heading }}</h2>
+ <span class="collection-paragraph">{{ section.settings.description }}</span>
+      <div class = "why-choose-us-image reviews-carousel  owl-carousel">
+        {% for block in section.blocks %}
+          <div class = "block-review item">
+            <div class = "first-row">
+                <div class = "first-column ">
+                   <img class="lazyload" data-src="{{ block.settings.img | img_url: '1920x'}}">
+                </div>
+               <div class = "second-column consumer-details">
+                 <div class = "rating">
+                <div class="review"><span class="{%- if block.settings.two-star -%}two-star{% endif %}
+               {%- if block.settings.three-star -%}three-star{% endif %}
+                 {%- if block.settings.four-star -%}four-star{% endif %}
+               {%- if block.settings.five-star -%} five-star{% endif %}
+               ">
+               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="659" height="273" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon  points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="659" height="273" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon  points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="659" height="273" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon  points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="659" height="273" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon  points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 104.1 75.5 72.021" enable-background="new 0 104.1 75.5 72.021" xml:space="preserve"><g><g><g><path d="M175.56,147.267c-0.258-0.795-0.946-1.375-1.773-1.495l-23.25-3.379l-10.399-21.068
+                c-0.37-0.75-1.134-1.225-1.97-1.225c-0.836,0-1.601,0.475-1.97,1.225l-10.399,21.068l-23.25,3.379
+                c-0.828,0.12-1.515,0.7-1.773,1.495c-0.259,0.796-0.043,1.669,0.556,2.252l16.823,16.4l-3.971,23.156
+                c-0.142,0.825,0.197,1.657,0.874,2.149c0.382,0.277,0.836,0.419,1.292,0.419c0.35,0,0.701-0.083,1.022-0.252l20.795-10.933
+                l20.795,10.933c0.741,0.389,1.638,0.324,2.314-0.167c0.676-0.492,1.015-1.325,0.874-2.149l-3.972-23.156l16.825-16.4
+                C175.603,148.936,175.818,148.063,175.56,147.267z"></path></g></g></g><image overflow="visible" width="659" height="273" xlink:href=" " transform="matrix(0.6513 0 0 0.6513 -157.0986 -91.9673)"></image><g><g><polygon points="75.114,131.564 48.183,129.794 38.039,104.313 27.896,129.794 0.994,131.564 21.627,149.084 
+            14.857,175.662 38.039,161.009 61.222,175.662 54.451,149.084"></polygon>
+    </g></g></svg>
+               </span>       
+                  </div>
+                    </div>     
+                  <span class = "consumer-name medium">{{ block.settings.name }}</span>
+                 <span class = "location">{{ block.settings.location }}</span>
+               </div>
+            </div>
+            <div class = "second-row">
+                  <span class = "descrition" id="review-scrolling">{{ block.settings.desc }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+</div>
+{% schema %}
+  {
+    "name": "reviews-section",
+    "max_blocks": 20,
+    "blocks": [
+  {
+    "type": "Details",
+    "name": "Reviews Detail ",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Select Image"
+      },
+            {
+            "type": "checkbox",
+            "id": "two-star",
+			"label": "Two Star"
+      },
+      {
+            "type": "checkbox",
+            "id": "three-star",
+			"label": "Three Star"
+      },
+{
+            "type": "checkbox",
+            "id": "four-star",
+			"label": "Four Star"
+      },
+{
+            "type": "checkbox",
+            "id": "five-star",
+			"label": "Five Star"
+      },
+       {
+        "type": "text",
+        "id": "name",
+        "label": "Enter Name"
+       },
+      {
+        "type": "text",
+        "id": "location",
+        "label": "Enter Location"
+      },
+       {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Enter Description"
+      }
+    ]
+  }
+],
+    "settings": [
+{
+  "id": "heading",
+  "label": "Enter Heading",
+  "type": "text"
+},
+{
+  "id": "description",
+  "label": "Enter Description",
+  "type": "richtext"
+}
+    ],
+  "presets": [
+    {
+      "name": "reviews-section",
+      "category": "Sections"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+<script>
+  
+jQuery(".reviews-carousel").owlCarousel({
+  autoplay: false,
+  margin: 20,
+  loop: true,
+  dots: false,
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 800,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1,
+      nav: false,
+      dots: true
+    },
+
+    600: {
+      items: 2
+    },
+
+    1024: {
+      items: 3
+    },
+
+    1366: {
+      items: 4.4
+    }
+  }
+});
+</script>
+
+
+

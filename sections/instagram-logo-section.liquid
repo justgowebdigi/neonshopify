@@ -1,0 +1,31 @@
+<div class = "logo-section">
+       <div class="circle">
+	<div class="logo"> </div>
+	<div class="feedtext">
+		<p>
+         . FOLLOW US
+         . FOLLOW US
+        </p>
+	</div>
+</div>
+{{ section.settings.text }}
+</div>
+
+{% schema %}
+{
+  "name": "instagram-logo",
+  "settings": [
+{
+  "id": "text",
+  "type": "html",
+  "label": "Enter Text"
+}
+  ], 
+
+"presets":[
+{"name":"instagram-logo",
+"category":"shop"
+}
+]
+}
+{% endschema %}

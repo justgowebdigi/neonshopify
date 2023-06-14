@@ -1,0 +1,80 @@
+<div class = "text-section neon-details-section ">
+   <div class = "row">
+      <div class = "first-col">
+         <div class = "main-img-box mb-25">
+           <h2>{{ section.settings.heading1 }}</h2>
+           {{ section.settings.para1 }}
+         </div>
+         <div class = "main-img-box">
+           <h2>{{ section.settings.heading3 }}</h2>
+           {{ section.settings.para3 }}           
+         </div>
+      </div>
+      <div class = "second-col">
+                 <div class = "main-img-box mb-25">
+           <h2>{{ section.settings.heading2 }}</h2>
+           {{ section.settings.para2 }}           
+         </div>
+
+         <div class = "main-img-box">
+           <h2>{{ section.settings.heading4 }}</h2>
+           {{ section.settings.para4 }}           
+         </div>
+      </div>
+   </div>
+</div>
+
+{% schema %}
+{
+  "name": "neon-details-section",
+  "settings": [
+    {
+      "id": "heading1",
+      "label": "Enter First Heading",
+      "type": "text"
+    },
+    {
+    "id": "para1",
+    "type": "richtext",
+    "label": "Enter Paragraph"
+  },
+      {
+      "id": "heading2",
+      "label": "Enter First Heading",
+      "type": "text"
+    },
+    {
+    "id": "para2",
+    "type": "richtext",
+    "label": "Enter Paragraph"
+  },
+    {
+      "id": "heading3",
+      "label": "Enter First Heading",
+      "type": "text"
+    },
+    {
+    "id": "para3",
+    "type": "richtext",
+    "label": "Enter Paragraph"
+  },
+    {
+      "id": "heading4",
+      "label": "Enter First Heading",
+      "type": "text"
+    },
+    {
+    "id": "para4",
+    "type": "richtext",
+    "label": "Enter Paragraph"
+  }
+  ], 
+
+"presets":[
+{
+  "name":"neon-details-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

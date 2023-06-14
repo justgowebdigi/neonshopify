@@ -1,0 +1,185 @@
+<style>
+/* width */
+.sc-bSqaIl.hcYZyY::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sc-bSqaIl.hcYZyY::-webkit-scrollbar-track {
+  background:#9200f7; 
+}
+ 
+/* Handle */
+.sc-bSqaIl.hcYZyY::-webkit-scrollbar-thumb {
+  background: #d0ff00; 
+    border-radius:20px;
+}
+
+/* Handle on hover */
+.sc-bSqaIl.hcYZyY::-webkit-scrollbar-thumb:hover {
+  background: #d0ff00; 
+}
+</style>
+
+<div class = "create-custom-container page-width">
+  {% render 'breadcrumbs' %}
+<h1 class = "custom-product-heading"> {{ section.settings.name }}</h1>
+
+    <div class = "create-custom-container ">
+      <div id="neon-customiser-app" data-customiserid="1070"></div>
+      </div>
+    </div>
+    
+<!-- For Desktop -->
+<div class = "create-custom-container mt-4 page-width desktop">
+<h4 class = "more-product-heading mobile">More on the product</h4>
+<!-- 	<article class="ootb-tabcordion">
+	<div class="ootb-tabcordion--tabs" role="tablist" aria-label="TabCordion">
+     {% if product.description != blank %} <button class="tab is-active" role="tab" aria-selected="true" aria-controls="tab1-tab" id="tab1">Product Description</button>
+       {% endif %}
+  {% if product.metafields.custom.delivery_guarantees != blank %}
+    <button class="tab" role="tab" aria-selected="false" aria-controls="tab2-tab" id="tab2" tabindex="-1">Delivery & Guarantees</button>
+    {% endif %}
+    {% if product.metafields.custom.technical_text != blank %}
+    <button class="tab" role="tab" aria-selected="false" aria-controls="tab3-tab" id="tab3" tabindex="-1">Technical</button>
+      {% endif %}
+    {% if product.metafields.custom.returns != blank %}          
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab4-tab" id="tab4" tabindex="-1">Returns</button>
+      {% endif %}
+	</div>
+<section id="tab1-tab" class="ootb-tabcordion--entry is-active" data-title="Product Description" tabindex="0" role="tabpanel" aria-labelledby="tab1">
+		<div class="ootb-tabcordion--entry-container">
+			<div class="ootb-tabcordion--entry-content">
+                  {{ product.description }}
+              </div>
+		</div>
+	</section> -->
+	<section id="tab2-tab" class="ootb-tabcordion--entry" data-title="Delivery & Guarantees" tabindex="-1" role="tabpanel" aria-labelledby="tab2">
+		<div class="ootb-tabcordion--entry-container">
+			<div class="ootb-tabcordion--entry-content">
+                {{ product.metafields.custom.delivery_guarantees }}
+			</div>
+		</div>
+	</section>
+	<section id="tab3-tab" class="ootb-tabcordion--entry" data-title="Technical" tabindex="-1" role="tabpanel" aria-labelledby="tab3">
+		<div class="ootb-tabcordion--entry-container">
+			<div class="ootb-tabcordion--entry-content">
+            {{ product.metafields.custom.technical_text }}
+			</div>
+		</div>
+	</section>
+  <section id="tab4-tab" class="ootb-tabcordion--entry" data-title="Returns" tabindex="-1" role="tabpanel" aria-labelledby="tab4">
+		<div class="ootb-tabcordion--entry-container">
+			<div class="ootb-tabcordion--entry-content">
+            {{ product.metafields.custom.returns }}
+			</div>
+		</div>
+	</section>
+</article>
+</div>
+
+<!--     For Mobile -->
+<div class="accordion-container mobile">
+ {% comment %}{% if product.description != blank %}
+    <div class="item accordion">
+        <h2 class="  ">
+            <div class="mr-15 accordion-title"><span class="accordion-question">Product Description</div>
+        </h2>
+        <div class="answer">
+            <div class="rte  pt-10 pb-30">
+                {{ product.description }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endcomment %}
+
+  {% if product.metafields.custom.delivery_guarantees != blank %}
+    <div class="item accordion">
+        <h2 class="  ">
+            <div class="mr-15 accordion-title"><span class="accordion-question">Delivery & Guarantees</div>
+        </h2>
+        <div class="answer">
+            <div class="rte  pt-10 pb-30">
+                {{ product.metafields.custom.delivery_guarantees }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if product.metafields.custom.technical_text != blank %}
+    <div class="item accordion">
+        <h2 class="  ">
+            <div class="mr-15 accordion-title"><span class="accordion-question">Technical</div>
+        </h2>
+        <div class="answer">
+            <div class="rte  pt-10 pb-30">
+                {{ product.metafields.custom.technical_text }}
+            </div>
+        </div>
+    </div>
+      {% endif %}
+
+    {% if product.metafields.custom.returns != blank %}          
+    <div class="item accordion">
+        <h2 class="  ">
+            <div class="mr-15 accordion-title"><span class="accordion-question">Returns</div>
+        </h2>
+        <div class="answer">
+            <div class="rte  pt-10 pb-30">
+                {{ product.metafields.custom.returns }}
+            </div>
+        </div>
+    </div>
+      {% endif %}
+</div>
+
+  <div class="custom_product">
+    {% render 'tabber_faq1' %}
+
+</div>
+
+    <script>
+
+  const customtext = document.querySelector(".customtext p");
+
+customtext.innerHTML = customtext.innerText
+	.split("")
+	.map(
+		(char, i) => `<span style="transform:rotate(${i * 15}deg)">${char}</span>`
+	)
+	.join("");
+  
+</script>
+  
+</div>
+
+{% schema %}
+{
+  "name": "custom-product-details",
+  "settings": [
+{
+  "id":"name",
+  "label": "Enter Heading",
+  "type": "text"
+},
+    {
+  "id":"description",
+  "label": "Enter Description",
+  "type": "html"
+},
+    {
+  "id": "text",
+  "type": "html",
+  "label": "Enter Instagram Id"
+}
+  ], 
+
+"presets":[
+{
+  "name":"custom-product-details",
+"category":"shop"
+}
+]
+}
+{% endschema %}

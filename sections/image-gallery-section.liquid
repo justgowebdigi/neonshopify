@@ -1,0 +1,41 @@
+<div class="image-gallery-container">
+<div class = "image-row">
+          {% for block in section.blocks %}
+            <div class = "item">
+               <img src = "{{ block.settings.img | img_url:'1920x'}}">
+            </div>
+        {%- endfor -%}
+</div>
+</div>
+{% schema %}
+  {
+    "name": "image-gallery",
+    "settings": [],
+    "max_blocks": 18,
+    "blocks": [
+  {
+    "type": "Block",
+    "name": "Add Block",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Select Image"
+      }
+    ]
+  }
+],
+  "presets":[
+{
+  "name":"image-gallery",
+  "category":"shop"
+}
+]  
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

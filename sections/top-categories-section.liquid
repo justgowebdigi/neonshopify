@@ -1,0 +1,174 @@
+<div class = "top-categories-section">
+    <h2>{{ section.settings.text }}</h2>
+    {{ section.settings.para }}
+
+   <div class = "tabber">
+        <ul>
+            <li class="tab-item activetab" target-wrapper="first-dynamic-table" target-tab="home">{{ section.settings.firsttab }}</li>
+            <li class="tab-item" target-wrapper="first-dynamic-table" target-tab="about">{{ section.settings.secondtab }}</li>
+            <li class="tab-item" target-wrapper="first-dynamic-table" target-tab="faqs">{{ section.settings.thirdtab }}</li>
+        </ul>
+        <div id="first-dynamic-table">
+            <div class="tab-content activetab" id="home">
+              <div class = "flex">
+              {% assign text_blocks = section.blocks | where: 'type', 'light' %}
+                {%- for block in text_blocks -%}
+                    <div class = "category   top-category-item">
+                      <a href = "{{ block.settings.link }}" class = "category-link medium">
+                        <div class = "category-img">
+                                        <img class="lazyload" data-src="{{ block.settings.img | img_url: '1920x'}}">
+                        </div>
+                          <div class = "category-name">
+                          {{ block.settings.name }}
+                        </div>
+                      </a>
+                    </div>
+                    {% endfor %}
+              </div>
+            </div>
+              {% assign about_blocks = section.blocks | where: 'type', 'board' %}
+            <div class="tab-content" id="about">
+              <div class = "flex">
+              
+               {%- for block in about_blocks -%}
+                    <div class = "category-about  top-category-item">
+                      <a href = "{{ block.settings.link2 }}" class = "category-link medium">
+                        <div class = "category-img">
+                           <img class="lazyload" data-src="{{ block.settings.img2 | img_url: '1920x'}}">
+                        </div>
+                          <div class = "category-name">
+                          {{ block.settings.name2 }}
+                        </div>
+                      </a>
+                    </div>
+                    {% endfor %}
+              </div>
+            </div>
+              {% assign faqs_blocks = section.blocks | where: 'type', 'other' %}
+          
+            <div class="tab-content" id="faqs">
+              <div class = "flex">
+                {%- for block in faqs_blocks -%}
+                  <div class = "category-faq top-category-item">
+                    <a href = "{{ block.settings.link1 }}" class = "category-link medium">
+                      <div class = "category-img">
+                          <img class="lazyload" data-src="{{ block.settings.img1 | img_url: '1920x'}}">
+                      </div>
+                        <div class = "category-name">
+                        {{ block.settings.name1 }}
+                      </div>
+                    </a>
+                  </div>
+                  {% endfor %}
+              </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "top-categories-section",
+    "max_blocks": 21,
+    "blocks": [
+  {
+    "type": "light",
+    "name": "Light",
+    "settings": [
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name",
+          "type": "text",
+          "label": "Enter Category Name"
+        }
+      ]
+  },
+  {
+    "type": "board",
+    "name": "Board ",
+    "settings": [
+        {
+          "id": "link2",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img2",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name2",
+          "type": "text",
+          "label": "Enter Category Name"
+        }
+      ]
+  },
+        {
+    "type": "other",
+    "name": "Other ",
+    "settings": [
+        {
+          "id": "link1",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img1",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name1",
+          "type": "text",
+          "label": "Enter Category Name"
+        }
+      ]
+  }
+],
+  "settings": [
+{
+  "id": "text",
+  "type": "text",
+  "label": "Enter Heading"
+},
+    {
+  "id": "para",
+  "type": "richtext",
+  "label": "Enter Text"
+},
+        {
+  "id": "firsttab",
+  "type": "text",
+  "label": "Enter First Tabber Heading"
+},
+ {
+  "id": "secondtab",
+  "type": "text",
+  "label": "Enter Second Tabber Heading"
+},
+  {
+  "id": "thirdtab",
+  "type": "text",
+  "label": "Enter Third Tabber Heading"
+}
+  ], 
+
+"presets":[
+{
+"name":"top-categories-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

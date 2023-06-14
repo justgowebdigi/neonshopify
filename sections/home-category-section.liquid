@@ -1,0 +1,83 @@
+<style>
+    .home-category-section{
+    width:1200px;
+      margin:0 auto;
+  }
+  .cat-wrap{
+    width:135px;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+  }
+ .cat-wrap p{
+   margin-top:16px;
+ }
+  @media screen and (max-width:1280px){
+    .cover{
+    overflow:scroll;
+  }
+
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.cover::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cover {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+</style>
+<div class="cover">
+<div class = "home-category-section">
+{%- for block in section.blocks -%}
+  <div class="cat-wrap">
+  <div class = "category">
+    <a href = "{{ block.settings.link }}" class = "category-link medium">
+      <div class = "category-img">
+                      <img class="lazyload" data-src="{{ block.settings.img | img_url: '1920x'}}">
+      </div>
+    </a>
+  </div>
+   <p>{{ block.settings.txt }}</p>
+    </div>
+  {% endfor %}
+</div>
+</div>
+{% schema %}
+{
+  "name": "home-category-section",
+    "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Add Block",
+      "settings": [
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "txt",
+          "type": "text",
+          "label" : "Enter Title"
+        }
+      ]
+    }
+  ], 
+
+"presets":[
+{
+"name":"home-category-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

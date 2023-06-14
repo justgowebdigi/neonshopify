@@ -1,0 +1,17 @@
+{%- if collection.metafields.custom.best_sellers.value != blank -%}
+  {% assign productprod =  collection.metafields.custom.best_sellers.value %}
+  {% for productprod in collection.metafields.custom.best_sellers.value %}
+  
+  <div class="subcollectionitem product product-block bs-items">
+      <a href="{{ productprod.url }}" target="_blank" class='up-l'>
+        <img src="{{ productprod.featured_image | img_url: '400x' }}" class = "image">
+        <div class = "product-block__title-price">
+          <p class="title">{{ productprod.title }}</p>
+          <p class="price "><span class = "amount theme-money ">{{ productprod.price | money }}</span></p>
+          <a class="product_link " href="{{ productprod.url}}" target="_blank">Shop Now</a>
+        </div>
+      </a>
+  </div>
+  
+  {%  endfor %}
+{%- endif -%}

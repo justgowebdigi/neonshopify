@@ -1,0 +1,74 @@
+<div class = "lets-create-section">
+  <h2>{{ section.settings.heading }}</h2>
+  {{ section.settings.para }}
+  <div class = "blocks">
+{%- for block in section.blocks -%}
+    <a href = "{{ block.settings.link }}" class = "category-link medium">
+      <div class = "category-img">
+                      <img class="lazyload" data-src="{{ block.settings.img | img_url: '1920x'}}">
+      </div>
+      <div class = "lets-create-category-details">
+        <div class = "category-name">
+       <div class = "ctitle"> {{ block.settings.name }}</div>
+  <button>{{ block.settings.button_text }}</button>
+      </div>
+      </div>
+    </a>
+  {% endfor %}
+  </div>
+  
+</div>
+
+{% schema %}
+{
+  "name": "lets-create-section",
+    "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Add Block",
+      "settings": [
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Enter Category Link"
+        },
+        {
+          "id": "img",
+          "type": "image_picker",
+          "label" : "Select Image"
+        },
+        {
+          "id": "name",
+          "type": "text",
+          "label": "Enter Category Name"
+        },
+        {
+          "id": "button_text",
+          "type": "text",
+          "label": "Enter Button Text"
+        }
+      ]
+    }
+  ], 
+  "settings":[
+{
+      "id": "heading",
+    "type": "text",
+    "label": "Enter Heading"
+},
+    {
+          "id": "para",
+    "type": "richtext",
+    "label": "Enter Paragraph"
+    }
+  ],
+
+"presets":[
+{
+"name":"lets-create-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

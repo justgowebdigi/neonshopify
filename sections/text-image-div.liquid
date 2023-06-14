@@ -1,0 +1,121 @@
+<style>
+  .blog-section-four.container-fluid{
+    padding:50px 0px !important;
+  }
+.btn-our-story{
+  border:1px solid #ff457c;
+  background-color:#ff457c;
+  color:white;
+  padding: 12px 35px;
+  width: 145px;
+  margin-top:10px ;
+  border-radius:27px;
+  text-transform:capitalize;
+}
+  .btn-our-story:hover{
+    color:#ff457c !important;
+      background-color:white;
+  }
+     
+ .inner-section{
+   display:flex;
+ }
+  
+   .box-item-left{
+     width:60%;
+     display:flex;
+     justify-content:center;
+     flex-direction:column;
+     padding-right:35px;
+  }
+  .box-item-left h3{
+     font-weight:700;
+     margin-bottom:20px;
+     text-transform:capitalize;
+   }
+  .box-item-left p{
+    line-height:25px;
+  }
+
+.box-item-right{
+    width:40%;
+    height:100%;
+  }
+  
+  .box-item-right img{
+    width:100%;
+    height:100%;
+     border-radius:10px;
+  }
+  
+   
+
+   @media screen and (max-width:540px){
+       .box-item-left{
+    width:100%;
+  }
+       .box-item-right{
+    width:100%;
+    }
+      .box-item-left h3{
+        text-align:center;
+      }
+       .inner-section{
+  flex-direction:column-reverse;
+           padding:0px 30px !important; 
+ }
+      .box-item-left{
+     padding-right:0px;
+  }
+}
+</style>
+
+<div class = "blog-section-four container-fluid">
+  <div class='page-width inner-section'>    
+      <div class = "box-item-left">
+        <h3>{{ section.settings.title }}</h3>
+         <p>{{ section.settings.content }}</p>
+        <a href="{{ section.settings.link }}" class="btn-our-story">our story</a>
+      </div>
+     <div class = "box-item-right">
+        <img class="lazyload" data-src="{{ section.settings.img | img_url: '1920x'}}">
+      </div>
+  </div> 
+</div>
+
+
+{% schema %}
+{
+  "name": "text-image-div",
+  "settings": [
+{
+  "id": "img",
+  "type": "image_picker",
+  "label": "Select Image"
+},        
+ {
+  "id": "title",
+  "type": "text",
+  "label": "Enter Title"
+},        
+ {
+  "id": "content",
+  "type": "richtext",
+  "label": "Enter Content"
+},        
+ {
+  "id": "link",
+  "type": "url",
+  "label": "Enter Link"
+}
+    
+  ], 
+
+"presets":[
+{
+  "name":"text-image-div",
+"category":"section"
+}
+]
+}
+{% endschema %}

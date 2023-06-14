@@ -1,0 +1,228 @@
+<style>
+ .category-carousel .owl-nav button {
+  position: absolute;
+  top: 33%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.category-carousel .owl-nav button.owl-prev {
+    color: #ff457c;
+    border-radius: 50%;
+    border: 1px solid #ff457c;
+    height: 40px;
+    margin: 0 5px;
+    font-size: 40px;
+    line-height: normal;
+    display: flex;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding-bottom:  6px !important;
+  left: -5%
+}
+.category-carousel .owl-nav button.owl-next {
+    color: #ff457c;
+    border-radius: 50%;
+    border: 1px solid #ff457c;
+    height: 40px;
+    margin: 0 5px;
+    font-size: 40px;
+    line-height: normal;
+    display: flex;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 6px !important;
+  right: -5%
+}
+
+.category-carousel .owl-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 33%;
+  display: inline-block;
+  background: #ccc;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #000;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+
+.category-carousel.owl-slider span {
+    font-size: 40px;    
+    position: relative;
+    top: -5px;
+  padding: 0px 10px;
+}
+.category-carousel .owl-nav button:focus {
+    outline: none;
+}
+
+</style>
+<div class = "container page-width-desktop our-best">
+  <div class = "heart-container">
+  {{ section.settings.heart }}
+  </div>
+<h2>{{ section.settings.heading }}</h2>
+  {{ section.settings.description }}
+<div class = "category-carousel">
+  
+  <div class = "see-our-best owl-carousel desktop">
+     {%- for block in section.blocks -%}
+       <div class = "item desktop">
+    <div class = "first-column ">
+       <img srcset="{{ block.settings.img | img_url: '1920x'}}"  class="lazyload">
+    </div>
+    <div class = "second-column ">
+    <span class = " first-img">
+       <img srcset="{{ block.settings.img1 | img_url: '1920x'}}"  class="lazyload">
+    </span>
+    <span class = "second-img ">
+       <img srcset="{{ block.settings.img2 | img_url: '1920x'}}"  class="lazyload">
+    </span>
+    </div>
+       </div>
+{% endfor %}
+  </div>
+
+    <div class = "see-our-best owl-carousel mobile">
+     {%- for block in section.blocks -%}
+    <div class = "first-column item">
+       <img srcset="{{ block.settings.img | img_url: '1920x'}}"  class="lazyload">
+    </div>
+    <div class = "second-column item">
+    <span class = " first-img">
+       <img srcset="{{ block.settings.img1 | img_url: '1920x'}}"  class="lazyload">
+    </span>
+    <span class = "second-img ">
+       <img srcset="{{ block.settings.img2 | img_url: '1920x'}}"  class="lazyload">
+    </span>
+    </div>
+{% endfor %}
+  </div>
+         <div class = "ctitle"> 
+        <a href = "{{ section.settings.link1 }}"><button>{{ section.settings.button_text1 }}</button></a>
+       <a href = "{{ section.settings.link2 }}" ><button>{{ section.settings.button_text2 }}</button></a>
+      </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "see-our-best-section",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "id": "heart",
+      "label": "Enter Lottie Image Code",
+      "type": "html"
+    },
+{
+  "id": "heading",
+  "type": "text",
+  "label": "Enter Heading"
+},
+    {
+  "id": "description",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+    {
+      "id": "link1",
+      "type": "url",
+      "label": "Enter Link"
+},
+    {
+  "id": "button_text1",
+  "type": "text",
+  "label": "Enter First Button Text"
+},
+        {
+      "id": "link2",
+      "type": "url",
+      "label": "Enter Link"
+},
+        {
+  "id": "button_text2",
+  "type": "text",
+  "label": "Enter Second  Button Text"
+}
+  ] ,
+    "blocks": [
+
+  {
+    "name": "Add Block ",
+    "type": "block",
+    "settings": [
+{
+  "id": "img",
+  "type": "image_picker",
+  "label": "Select First Image"
+},
+    {
+  "id": "img1",
+  "type": "image_picker",
+  "label": "Select Second Image"
+},
+      {
+  "id": "img2",
+  "type": "image_picker",
+  "label": "Select Third Image"
+}
+    ]
+  }
+], 
+
+"presets":[
+{"name":"see-our-best-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}
+<script>
+jQuery(".owl-carousel").owlCarousel({
+  margin: 15,
+  dots: false,
+  responsiveClass: true,
+  autoHeight:true,
+  autoplayTimeout: 7000,
+  smartSpeed: 800,
+    loop: true,
+  nav: true,
+  responsive: {
+    0: {
+      nav: false,
+      dots: false,
+      autoplay: false,
+      autoWidth: true,
+      slidesToScroll: 1,
+      items: 1.2,
+    loop: true
+    },
+
+    600: {
+      items: 2
+    },
+
+    1024: {
+      items: 2
+    },
+
+    1366: {
+      items: 2
+    }
+  }
+});
+</script>

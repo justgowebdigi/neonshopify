@@ -1,0 +1,71 @@
+        <div class="container accordion-section container--sm faqs items page-width"  style= "background-color:  {{ section.settings.color }};">
+        <h2 class = "faq-heading"> {{ section.settings.heading }}</h2>
+         <span class = "faq-description">{{ section.settings.description }}</span>
+          <div class = "accordion">
+          {% for block in section.blocks %}
+                <h2 class=" heading item "><div class="mr-15 accordion-title"><span class = "">{{ block.settings.question }}</span></div> </h2>
+                <div class="contents">
+                    <div class="rte  pt-10 pb-30">
+                         {{ block.settings.answer }}
+                    </div>
+                </div>
+        {%- endfor -%}
+          </div>
+    </div>
+
+
+{% schema %}
+  {
+    "name": "Faq Section",
+        "settings": [
+{
+"id": "color",
+"type": "color",
+"label": "select Color"
+},
+   {
+  "id": "heading",
+  "type": "text",
+  "label": "Enter Heading"
+},
+    {
+  "id": "description",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+}
+    ],
+    "max_blocks": 20,
+    "blocks": [
+  {
+    "type": "Block",
+    "name": "Add Block",
+    "settings": [
+      {
+        "type": "text",
+        "id": "question",
+        "label": "Enter Question"
+      },
+      {
+        "type": "text",
+        "id": "answer",
+        "label": "Enter Answer"
+      }
+    ]
+  }
+],
+  "presets": [
+    {
+      "name": "Faq Section",
+      "category": "Sections"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+

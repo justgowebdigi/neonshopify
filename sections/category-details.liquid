@@ -1,0 +1,124 @@
+   <div class= "collection-icon-container ">
+      <div class="collection-icon custom">
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'design' %}
+            <img src ="{{ section.settings.img1 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+            <h4>{{ section.settings.name1 }}</h4>
+           {{ section.settings.para1 }}
+          </div>
+        </div>
+
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'upto' %}
+           <img src ="{{ section.settings.img2 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+          <h4>{{ section.settings.name2 }}</h4>
+           {{ section.settings.para2 }}
+          </div>
+        </div>
+
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'mockup' %}
+           <img src ="{{ section.settings.img3 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+         <h4>{{ section.settings.name3 }}</h4>
+           {{ section.settings.para3 }}
+          </div>
+        </div>
+
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'warranty' %}
+           <img src ="{{ section.settings.img4 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+           <h4>{{ section.settings.name4 }}</h4>
+           {{ section.settings.para4 }}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+{% schema %}
+{
+  "name": "category-details-section",
+  "settings": [
+    {
+  "id": "name1",
+  "type": "text",
+  "label": "Enter First Svg Heading"
+},
+{
+  "id": "para1",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+{
+  "id": "img1",
+  "type": "image_picker",
+  "label": "Select Image"
+},
+        {
+  "id": "name2",
+  "type": "text",
+  "label": "Enter Second Svg Heading"
+},
+{
+  "id": "para2",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+{
+  "id": "img2",
+  "type": "image_picker",
+  "label": "Select Image"
+},
+{
+  "id": "name3",
+  "type": "text",
+  "label": "Enter Third Svg Heading"
+},
+{
+  "id": "para3",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+    {
+  "id": "img3",
+  "type": "image_picker",
+  "label": "Select Image"
+},
+    {
+  "id": "name4",
+  "type": "text",
+  "label": "Enter Fourth Svg Heading"
+},
+{
+  "id": "para4",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+  
+    {
+  "id": "img4",
+  "type": "image_picker",
+  "label": "Select Image"
+}
+  ], 
+
+"presets":[
+{
+  "name":"category-details-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}

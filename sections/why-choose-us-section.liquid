@@ -1,0 +1,92 @@
+<div class = "main-scrolling-container why-choose ">
+<section class = "font-container">
+  <div class="marquee text-container enable-animation">
+     {% assign text_blocks = section.blocks | where: 'type', 'text' %}
+       <ul class = "marquee__content">
+          {% for block in text_blocks %}
+                 <li class="text-details" style = "color: {{ block.settings.color }}"><span>{{ block.settings.text }}</span></li>  
+        {%- endfor -%}
+        </ul>
+
+      {% assign text_blocks = section.blocks | where: 'type', 'text' %}
+       <ul  aria-hidden="true" class="marquee__content">
+          {% for block in text_blocks %}
+                 <li class="text-details" style = "color: {{ block.settings.color }}"><span>{{ block.settings.text }}</span></li>  
+        {%- endfor -%}
+        </ul>
+  </div>
+</section>
+      <div class = " intro">
+      <div class = "why-choose-us-image  page-width ">
+     {% assign image_blocks = section.blocks | where: 'type', 'Details' %}
+        {% for block in image_blocks %}
+          <div class = "details">
+               {{ block.settings.image }}
+          <span class = "name">{{ block.settings.name }}</span>
+          <span class = "descrition">{{ block.settings.desc }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      </div>
+</div>
+{% schema %}
+  {
+    "name": "why-choose-us-section",
+    "max_blocks": 20,
+    "blocks": [
+  {
+    "type": "text",
+    "name": "Button",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Select Color"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Enter text"
+      }
+    ]
+  },
+  {
+    "type": "Details",
+    "name": "Details ",
+    "settings": [
+      {
+        "type": "html",
+        "id": "image",
+        "label": "Select Image"
+      },
+       {
+        "type": "text",
+        "id": "name",
+        "label": "Enter Name"
+      },
+       {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Enter Description"
+      }
+    ]
+  }
+],
+    "settings": [
+
+    ],
+  "presets": [
+    {
+      "name": "why-choose-us-section",
+      "category": "Sections"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

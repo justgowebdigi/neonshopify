@@ -1,0 +1,218 @@
+<div class = "create-custom-container page-width upload-logo-section">
+  {% render 'breadcrumbs' %}
+  <h1 class = "custom-product-heading mobile"> {{ section.settings.name11 }}</h1>
+<div class = "desktop">
+<h1 class = "custom-product-heading "> {{ section.settings.name }}</h1>
+<span class = "custom-product-description "> {{ section.settings.description }}</span>
+
+   <div class="collection-icon-container">
+      <div class="collection-icon custom">
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'design' %}
+           <img src ="{{ section.settings.img1 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+            <h4>{{ section.settings.name1 }}</h4>
+           {{ section.settings.para1 }}
+          </div>
+        </div>
+
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'upto' %}
+           <img src ="{{ section.settings.img2 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+          <h4>{{ section.settings.name2 }}</h4>
+           {{ section.settings.para2 }}
+          </div>
+        </div>
+
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'mockup' %}
+           <img src ="{{ section.settings.img3 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+         <h4>{{ section.settings.name3 }}</h4>
+           {{ section.settings.para3 }}
+          </div>
+        </div>
+
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'warranty' %}
+           <img src ="{{ section.settings.img4 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+           <h4>{{ section.settings.name4 }}</h4>
+           {{ section.settings.para4 }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+
+  <div class = "create-custom-container upload-logo container">
+    <div class = "row">
+      <div class = "first-col">
+                 <img class="lazyload " data-src="{{ section.settings.img | img_url: '1920x'}}">
+      </div>
+      <div class = "second-col">
+        <h1 class = "form-heading desktop"> {{ section.settings.formname }}</h1>
+        <span class = "form-description "> {{ section.settings.formdescription }}</span>
+
+<div style="margin:0 auto;" class="pxFormGenerator" id="fn-Bz_sdRmVz1zNJkihfcA"></div>
+      </div>
+    </div>
+    <div class = "mobile mobile-container">
+<h1 class = "custom-product-heading "> {{ section.settings.name }}</h1>
+<span class = "custom-product-description "> {{ section.settings.description }}</span>
+
+   <div class="collection-icon-container product">
+      <div class="collection-icon custom">
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'design' %}
+            <img src ="{{ section.settings.img1 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+            <h4>{{ section.settings.name1 }}</h4>
+           {{ section.settings.para1 }}
+          </div>
+        </div>
+
+        <div class="collection-item">
+          <div class="svg">
+            {% render 'upto' %}
+           <img src ="{{ section.settings.img2 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+          <h4>{{ section.settings.name2 }}</h4>
+           {{ section.settings.para2 }}
+          </div>
+        </div>
+
+          <div class="collection-item">
+          <div class="svg">
+            {% render 'mockup' %}
+           <img src ="{{ section.settings.img3 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+         <h4>{{ section.settings.name3 }}</h4>
+           {{ section.settings.para3 }}
+          </div>
+        </div>
+                <div class="collection-item">
+          <div class="svg">
+            {% render 'warranty' %}
+           <img src ="{{ section.settings.img4 | img_url: '1920x' }}">
+          </div>
+          <div class="name">
+           <h4>{{ section.settings.name4 }}</h4>
+           {{ section.settings.para4 }}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "upload-logo-details",
+  "settings": [
+        {
+      "id": "name11",
+      "type": "text",
+      "label": "Enter Heading"
+    },
+            {
+      "id": "name",
+      "type": "text",
+      "label": "Enter Mobile Heading"
+    },
+  {
+    "id": "img",
+    "type":"image_picker",
+    "label": "Select Image"
+  },
+    {
+      "id": "description",
+      "type": "richtext",
+      "label": "Enter Description"
+    },
+    {
+  "id": "name1",
+  "type": "text",
+  "label": "Enter First Svg Heading"
+},
+{
+  "id": "para1",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+{
+  "id": "img1",
+  "type": "image_picker",
+  "label": "Select Image"
+},
+        {
+  "id": "name2",
+  "type": "text",
+  "label": "Enter Second Svg Heading"
+},
+{
+  "id": "para2",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+{
+  "id": "img2",
+  "type": "image_picker",
+  "label": "Select Image"
+},
+{
+  "id": "name3",
+  "type": "text",
+  "label": "Enter Third Svg Heading"
+},
+{
+  "id": "para3",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+    {
+  "id": "img3",
+  "type": "image_picker",
+  "label": "Select Image"
+},
+    {
+  "id": "name4",
+  "type": "text",
+  "label": "Enter Fourth Svg Heading"
+},
+{
+  "id": "para4",
+  "type": "richtext",
+  "label": "Enter Paragraph"
+},
+  
+    {
+  "id": "img4",
+  "type": "image_picker",
+  "label": "Select Image"
+}
+  ], 
+
+"presets":[
+{
+  "name":"upload-logo-details",
+"category":"shop"
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,92 @@
+<style>
+
+</style>
+<div class = "main-scrolling-container">
+
+<section class = "font-container">
+  <div class="marquee text-container enable-animation">
+     {% assign text_blocks = section.blocks | where: 'type', 'text' %}
+       <ul class = "marquee__content">
+          {% for block in text_blocks %}
+                 <li class="text-details" style = "color: {{ block.settings.color }}"><span>{{ block.settings.text }}</span></li>  
+        {%- endfor -%}
+        </ul>
+
+      {% assign text_blocks = section.blocks | where: 'type', 'text' %}
+       <ul  aria-hidden="true" class="marquee__content">
+          {% for block in text_blocks %}
+                 <li class="text-details" style = "color: {{ block.settings.color }}"><span>{{ block.settings.text }}</span></li>  
+        {%- endfor -%}
+        </ul>
+  </div>
+</section>
+
+<section class = "svg-container">
+<div class="marquee marquee--reverse image-container enable-animation">
+    <ul class="marquee__content">
+      {% assign image_blocks = section.blocks | where: 'type', 'image' %}
+        {% for block in image_blocks %}
+              {{ block.settings.image }}
+        {% endfor %}
+    </ul>
+
+    <ul aria-hidden="true" class="marquee__content">
+      {% assign image_blocks = section.blocks | where: 'type', 'image' %}
+        {% for block in image_blocks %}
+               {{ block.settings.image }}
+        {% endfor %}
+    </ul>
+  </div>
+</section>
+</div>
+{% schema %}
+  {
+    "name": "text-scrolling",
+    "max_blocks": 16,
+    "blocks": [
+  {
+    "type": "text",
+    "name": "Button",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Select Color"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Enter text"
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "name": "Image slide",
+    "settings": [
+      {
+        "type": "html",
+        "id": "image",
+        "label": "Select Image"
+      }
+    ]
+  }
+],
+    "settings": [
+
+    ],
+  "presets": [
+    {
+      "name": "text-scrolling",
+      "category": "Sections"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

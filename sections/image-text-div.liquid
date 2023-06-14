@@ -1,0 +1,93 @@
+<style>
+  .blog-image-section-two.container-fluid{
+    background-color: #ffebf1;
+    padding:50px 0px !important;
+  }
+  .box-content-left{
+    width:40%;
+  }
+  .box-content-left img{
+    width:100%;
+    height:100%;
+    border-radius:10px;
+  }
+   .box-content-right{
+    width:60%;
+     padding-left:35px;
+     display:flex;
+     justify-content:center;
+     flex-direction:column;
+  }
+   
+   .box-content-right h3{
+     font-weight:700;
+     margin-bottom:20px;
+      text-transform:capitalize;
+   }
+  .box-content-right p{
+    line-height:25px;
+  }
+ .inner-box{
+   display:flex;
+ }
+   @media screen and (max-width:540px){
+       .box-content-left{
+    width:100%;
+  }
+       .box-content-right{
+    width:100%;
+           padding-left:0px !important;
+    }
+      .box-content-right h3{
+        text-align:center;
+      }
+       .inner-box{
+  flex-direction:column;
+        padding:0px 30px !important; 
+ }
+}
+</style>
+
+<div class = "blog-image-section-two container-fluid">
+  <div class='page-width inner-box'>
+      <div class = "box-content-left">
+        <img class="lazyload" data-src="{{ section.settings.img | img_url: '1920x'}}">
+      </div>
+      <div class = "box-content-right">
+        <h3>{{ section.settings.title }}</h3>
+         <p>{{ section.settings.content }}</p>
+      </div>
+  </div> 
+</div>
+
+
+{% schema %}
+{
+  "name": "image-text-div",
+  "settings": [
+{
+  "id": "img",
+  "type": "image_picker",
+  "label": "Select Image"
+},        
+ {
+  "id": "title",
+  "type": "text",
+  "label": "Enter Title"
+},        
+ {
+  "id": "content",
+  "type": "richtext",
+  "label": "Enter Content"
+}
+    
+  ], 
+
+"presets":[
+{
+  "name":"image-text-div",
+"category":"section"
+}
+]
+}
+{% endschema %}

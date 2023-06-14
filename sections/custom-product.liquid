@@ -1,0 +1,49 @@
+<div class = "create-custom-container page-width">
+<div id="neon-customiser-app" data-customiserid="340"></div>
+  <div class = "logo-section">
+       <div class="circle">
+	<div class="logo"> </div>
+	<div class="customtext">
+		<p>
+         . FOLLOW US
+         . FOLLOW US
+        </p>
+	</div>
+</div>
+{{ section.settings.text }}
+</div>
+
+</div>
+
+    <script>
+
+  const customtext = document.querySelector(".customtext p");
+
+customtext.innerHTML = customtext.innerText
+	.split("")
+	.map(
+		(char, i) => `<span style="transform:rotate(${i * 15}deg)">${char}</span>`
+	)
+	.join("");
+  
+</script>
+
+{% schema %}
+{
+  "name": "custom-product-section",
+  "settings": [
+{
+  "id": "text",
+  "type": "html",
+  "label": "Enter Text"
+}
+  ], 
+
+"presets":[
+{
+  "name":"custom-product-section",
+"category":"shop"
+}
+]
+}
+{% endschema %}
